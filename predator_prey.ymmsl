@@ -1,0 +1,29 @@
+ymmsl_version: v0.1
+
+model:
+  name: predator_prey
+
+  components:
+    predator:
+      implementation: predator
+      ports:
+        o_i: predator_temp
+        s: prey_temp
+
+    prey:
+      implementation: prey
+      ports:
+        o_i: prey_temp
+        s: predator_temp
+
+    #conduits:
+    #  prey.prey_temp: predator.prey_temp
+    #  predator.predator_temp: prey.predator_temp
+
+settings:
+  t_max: 10.0
+  dt: 0.01
+  predator.a: 1.0
+  predator.b: 1.0
+  prey.c: 1.0
+  prey.d: 1.0
