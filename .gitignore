@@ -1,0 +1,4 @@
+*.log
+*.sqlite
+*.sqlite-journal
+__pycache__/
