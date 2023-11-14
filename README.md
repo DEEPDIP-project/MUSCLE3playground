@@ -7,8 +7,12 @@ This is a companion to MUSCLE3's [tutorial](https://muscle3.readthedocs.io/en/la
 The `predator_prey.py` and the files it depends on implement a Lotka-Volterra competition model, also known as predator-prey equation. Namely:
 
 $$
+\begin{equation}
+\begin{cases}
 \dot x = ax - bxy \\
 \dot y = cxy - dy
+\end{cases}
+\end{equation}
 $$
 
 where $x$ and $y$ represent, respectively, the prey and predator populations.
