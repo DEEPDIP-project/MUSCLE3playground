@@ -5,8 +5,8 @@ from libmuscle.runner import run_simulation
 import ymmsl
 
 
-from muscle3playground.predator import predator
-from muscle3playground.predator import prey
+from muscle3playground.lotkavolterra import predator
+from muscle3playground.lotkavolterra import prey
 
 # Configure Python logging
 logging.basicConfig()
