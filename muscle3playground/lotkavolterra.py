@@ -15,7 +15,7 @@ def predator():
         # begin F_INIT
         a = instance.get_setting('a', 'float')
         b = instance.get_setting('b', 'float')
-        dy = lambda x, y : a*x - b*x*y
+        dx = lambda x, y : a*x - b*x*y
 
         t_max = instance.get_setting('t_max', 'float')
         dt = instance.get_setting('dt', 'float')
@@ -33,7 +33,7 @@ def predator():
             # begin S
             msg = instance.receive('prey_temp')
             prey_temp = copy.copy(msg.data)
-            predator_temp += dy(predator_temp, prey_temp)
+            predator_temp += dx(predator_temp, prey_temp)
             t_cur += dt
             # end S
 
